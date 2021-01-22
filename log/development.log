@@ -1,8 +1,8 @@
 Started GET "/" for 127.0.0.1 at 2021-01-22 13:52:34 +0200
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "IventsCatalogue_development" does not exist
 ):
-  
+
 activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
 activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
 activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
@@ -68,10 +68,10 @@ Completed 200 OK in 227ms (Views: 84.1ms | ActiveRecord: 0.0ms | Allocations: 32
 
 
 Started GET "/uk/products/13" for ::1 at 2021-01-22 13:58:38 +0200
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "IventsCatalogue_development" does not exist
 ):
-  
+
 activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
 activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
 activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
@@ -128,10 +128,10 @@ puma (5.1.1) lib/puma/request.rb:75:in `handle_request'
 puma (5.1.1) lib/puma/server.rb:431:in `process_client'
 puma (5.1.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
 Started GET "/" for ::1 at 2021-01-22 13:58:42 +0200
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "IventsCatalogue_development" does not exist
 ):
-  
+
 activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
 activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
 activerecord (6.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
@@ -200,7 +200,7 @@ Started GET "/" for ::1 at 2021-01-22 14:07:56 +0200
   [1m[35m (13.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
   [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
   [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -213,7 +213,7 @@ You have 1 pending migration:
 
 
 ):
-  
+
 activerecord (6.1.1) lib/active_record/migration.rb:625:in `check_pending!'
 activerecord (6.1.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
 activesupport (6.1.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
@@ -262,12 +262,12 @@ Started POST "/rails/actions" for ::1 at 2021-01-22 14:07:58 +0200
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to CreateEvents (20210122120313)
   [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6524339353123120620)[0m
-  
+
 StandardError (An error has occurred, this and all later migrations canceled:
 
 undefined method `data' for #<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition:0x00007fbd556a19a8>
 Did you mean?  date):
-  
+
 db/migrate/20210122120313_create_events.rb:5:in `block in change'
 activerecord (6.1.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:314:in `create_table'
 activerecord (6.1.1) lib/active_record/migration.rb:929:in `block in method_missing'
@@ -381,7 +381,7 @@ Built at: 01/22/2021 2:09:14 PM
                                      Asset       Size       Chunks                         Chunk Names
     js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
 js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
-                             manifest.json  364 bytes               [emitted]              
+                             manifest.json  364 bytes               [emitted]
 Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d5a3c3b4dce84b5eb605.js.map
 [./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
 [./app/javascript/channels/index.js] 211 bytes {application} [built]
@@ -393,18 +393,6 @@ Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d
 Completed 200 OK in 5106ms (Views: 5091.7ms | ActiveRecord: 0.0ms | Allocations: 19131)
 
 
-<<<<<<< HEAD
-Started GET "/" for ::1 at 2021-01-22 14:16:01 +0200
-  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
-SyntaxError (/home/volodymyr/github/IventsCatalogue/app/controllers/events_controller.rb:15: syntax error, unexpected tSYMBEG, expecting ')'
-..._date, :place, :avatar. images:[])
-...                              ^):
-  
-app/controllers/events_controller.rb:15: syntax error, unexpected tSYMBEG, expecting ')'
-app/controllers/events_controller.rb:15: syntax error, unexpected tSYMBEG, expecting ')'
-app/controllers/events_controller.rb:15: syntax error, unexpected tSYMBEG, expecting ')'
-=======
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6524339353123120620)[0m
   [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to CreateActiveStorageTables (20210122121257)
@@ -436,6 +424,94 @@ Processing by EventsController#index as HTML
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 5424)
 Completed 200 OK in 74ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 8204)
+Started GET "/events/1" for ::1 at 2021-01-22 14:26:28 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:12:in `event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 16.9ms | Allocations: 3595)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 3675)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms | Allocations: 5980)
 
 
->>>>>>> a34513f3380bae4924fec5e65398e739e6a4a85e
+  
+ActionView::Template::Error (undefined method `simple_form_form' for #<ActionView::Base:0x0055fd5186f930>
+Did you mean?  simple_form_for):
+    1: <%simple_form_form do |f|%>
+    2: <%=f.input :name%>
+    3: <%end%>
+  
+app/views/events/show.html.erb:1
+Started GET "/events/1" for ::1 at 2021-01-22 14:26:40 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:12:in `event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1092)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1172)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 3326)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    1: <%simple_form_for do |f|%>
+    2: <%=f.input :name%>
+    3: <%end%>
+  
+app/views/events/show.html.erb:1
+Started GET "/events/1" for ::1 at 2021-01-22 14:27:09 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:12:in `event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 59.3ms | Allocations: 18082)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.4ms | Allocations: 23177)
+Completed 200 OK in 86ms (Views: 82.3ms | ActiveRecord: 0.9ms | Allocations: 25368)
+
+
+Started GET "/events/1" for ::1 at 2021-01-22 14:27:23 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:12:in `event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3044)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 8018)
+Completed 200 OK in 21ms (Views: 15.9ms | ActiveRecord: 1.1ms | Allocations: 10201)
+
+
+Started GET "/events/1" for ::1 at 2021-01-22 14:28:08 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:12:in `event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 5201)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.7ms | Allocations: 7376)
+
+
+Started GET "/events/1" for ::1 at 2021-01-22 14:29:08 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:12:in `event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5209)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 1.0ms | Allocations: 7384)
+
+
