@@ -1,7 +1,7 @@
 <div class="col-12 col-md-5 col-lg-4">
-  <div class="card m-3">
+  <div class="card m-3-white bg-dark mb-3" style="width:25rem;">
     <%= link_to event_path(event) do %>
-    <%= image_tag(event.avatar) %>
+      <%= event_image(event.photo)%>
     <div class="card-body">
       <%= event.name%>
     </div>

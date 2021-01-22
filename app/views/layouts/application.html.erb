@@ -8,9 +8,16 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "_variables"%>
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+<style>
+     body {
+      background: #ced4da; /* Цвет фона */
+      color: #212529; /* Цвет текста */
+     }
+    </style>
