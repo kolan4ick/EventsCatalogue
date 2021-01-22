@@ -1,1 +1,31 @@
-<%=@event.name%>
+<div class="">
+  <h1>
+    Назва:
+    <%=@event.name%>
+  <h1>
+    <p>
+      <%=image_tag @event.photo, width:250%>
+    </p>
+    <h4>
+      Опис:
+      <%=@event.body%>
+  </h4>
+  <h4>
+    Місце:
+    <%=@event.place%>
+  </h4>
+  <h4>Зображення:</h4>
+  <p>
+    <%@event.images.each do |image|%>
+      <%=image_tag image, width:250, height:250%>
+    <%end%>
+  </p>
+  <h4>
+    Дата початку:
+   <%=@event.begin_date%>
+  </h4>
+  <h4>
+    Дата закінчення:
+   <%=@event.end_date%>
+  </h4>
+</div>
