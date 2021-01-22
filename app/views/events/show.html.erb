@@ -4,7 +4,7 @@
     <%=@event.name%>
   <h1>
     <p>
-      <%=image_tag @event.photo, width:250%>
+      <%= event_image(@event.avatar) %>
     </p>
     <h4>
       Опис:
