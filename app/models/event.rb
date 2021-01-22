@@ -7,4 +7,9 @@ class Event < ApplicationRecord
   rescue OpenURI::HTTPError => e
     pp e
   end
-end
+  def photos=(objects)
+    objects.each do |object|
+        images.attach(io: object.open, filename: object.original_filename)
+      end
+    end
+  end
