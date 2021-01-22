@@ -1,1 +1,1 @@
-# IventsCatalogue
+# EventsCatalogue
