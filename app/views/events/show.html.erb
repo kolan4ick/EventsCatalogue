@@ -1,4 +1,4 @@
-<div class="">
+<div class="m-3">
   <h1>
     Назва:
     <%=@event.name%>
@@ -15,11 +15,11 @@
     <%=@event.place%>
   </h4>
   <h4>Зображення:</h4>
-  <p>
+  <div class="col-9">
     <%@event.images.each do |image|%>
       <%=image_tag image, width:250, height:250%>
     <%end%>
-  </p>
+  </div>
   <h4>
     Дата початку:
    <%=@event.begin_date%>
