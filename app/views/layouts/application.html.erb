@@ -5,22 +5,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <style>
+      .photo_link {
+        display: inline-block;
+      }
+    </style>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "_footer"%>
   </head>
+  <style>
+    body {
+      background: #ced4da;
+      /* Цвет фона */
+      color: #212529;
+      /* Цвет текста */
+    }
+  </style>
   <%= render "layouts/navbar"%>
+  <% if controller_name == "events" && action_name == "show"%>
+    <%= render "layouts/modals/one_photo_form"%>
+  <%end%>
   <body>
-    <main style="min-height: 90vh;">
-    <%= yield %>
+    <main style="min-height: 89vh;">
+      <%= yield %>
     </main>
   </body>
   <%= render "layouts/footer"%>
 </html>
-<style>
-     body {
-      background: #ced4da; /* Цвет фона */
-      color: #212529; /* Цвет текста */
-     }
-    </style>

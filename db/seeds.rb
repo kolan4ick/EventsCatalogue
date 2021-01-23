@@ -15,7 +15,7 @@ events = []
     body: Faker::Movie.title,
     # age_limit: Faker::Number.within(range: 1..21),
     place: Faker::Nation.capital_city,
-    set_image: 'https://picsum.photos/250'
+    set_image: 'https://picsum.photos/2048'
   }
 end
 Event.create!(events)
