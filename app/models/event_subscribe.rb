@@ -1,0 +1,2 @@
+class EventSubscribe < ApplicationRecord
+end
