@@ -1,0 +1,2 @@
+module EventSubscribesHelper
+end

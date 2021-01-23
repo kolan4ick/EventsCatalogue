@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :users
   devise_for :users
+  resources :users
   get 'events/index'
+  resources :event_subscribes
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   #get 'events/index'
