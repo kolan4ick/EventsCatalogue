@@ -70,10 +70,12 @@ ActiveRecord::Schema.define(version: 2021_01_23_215346) do
   end
 
   create_table "event_subscribes", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "event_id"
+    t.bigint "user_id"
+    t.bigint "event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_event_subscribes_on_event_id"
+    t.index ["user_id"], name: "index_event_subscribes_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|

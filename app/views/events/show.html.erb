@@ -33,7 +33,7 @@
     </div>
     <% pre_event = @event.event_subscribes.find { |eventsub| eventsub.user_id == current_user.id && eventsub.event_id == @event.id} %>
       <% if pre_event %>
-        <%= button_to "Записатись на подію", event_event_subscribe_path(@event, pre_event), class:"btn btn-primary", method: :delete %>
+      <%= button_to "Відписатись від подію", event_event_subscribe_path(@event, pre_event), class:"btn btn-danger", method: :delete %>
       <% else %>
-        <%= button_to "Відписатись від події", event_event_subscribes_path(@event), class:"btn btn-danger", method: :post %>
+      <%= button_to "Підписатись на подію", event_event_subscribes_path(@event), class:"btn btn-success", method: :post %>
       <% end %>
