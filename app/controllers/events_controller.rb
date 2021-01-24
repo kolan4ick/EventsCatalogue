@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all.with_attached_images
+    @events = Event.order(:name).page(params[:page]).per($PERPAGE).with_attached_images
   end
 
   def show
