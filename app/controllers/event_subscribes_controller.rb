@@ -1,12 +1,13 @@
 class EventSubscribesController < ApplicationController
   def create
-    EventSubscribe.create(event_subscribes_params)
-  end
-  def new
+    Event.find(params[:event_id]).event_subscribes.create(user_id: current_user.id)
+    redirect_to request.referrer
   end
 
-  private
-  def event_subscribes_params
-    params.require(:event_subscribes).permit(:user, :event)
+  def destroy
+    Event.find(params[:event_id]).event_subscribes.find(params[:id]).destroy
+    redirect_to request.referrer
   end
+
+  def new; end
 end

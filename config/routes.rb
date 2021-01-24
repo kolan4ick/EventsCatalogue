@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'events/index'
   resources :event_subscribes
   devise_for :admin_users, ActiveAdmin::Devise.config
+  resources :events do
+    resources :event_subscribes
+  end
   ActiveAdmin.routes(self)
   #get 'events/index'
   #get 'events/show'

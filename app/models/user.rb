@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   #has_many :events
   has_many :event_subscribes
+  has_many :events, :through => :event_subscribes
 end

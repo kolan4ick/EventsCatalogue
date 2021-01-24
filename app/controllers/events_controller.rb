@@ -7,7 +7,6 @@ class EventsController < ApplicationController
   def show
       event
   end
-
   private
 
   def event
@@ -17,5 +16,6 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:name, :body, :end_date, :begin_date, :place, :avatar, images:[])
   end
-  
+
+
 end
