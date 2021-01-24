@@ -1,4 +1,5 @@
 class EventSubscribesController < ApplicationController
+  before_action :authenticate_user!
   def create
     Event.find(params[:event_id]).event_subscribes.create(user_id: current_user.id)
     redirect_to request.referrer
