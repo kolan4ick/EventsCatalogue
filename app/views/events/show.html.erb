@@ -1,11 +1,17 @@
+<script>
+  function onClickImage(element) {
+    document.getElementById("imgInImageModal").src = element.src;
+    document.getElementById("imageModal").style.display = "block";
+  }
+</script>
 <div class="m-3">
   <h1>
     Назва:
     <%=@event.name%>
     <h1>
-      <div class="photo_link" type="button" data-bs-toggle="modal" data-bs-target="#OnePhotoForm">
+      <div type="button" class="photo_link">
         <p>
-          <%= event_image(@event.avatar) %>
+          <%= image_tag @event.avatar, width:300, height:300, onclick:"onClickImage(this)" %>
         </p>
       </div>
       <h4>
@@ -19,7 +25,9 @@
       <h4>Зображення:</h4>
       <div class="col-9">
         <%@event.images.each do |image|%>
-          <%=image_tag image, width:250, height:250%>
+          <div type="button" class="photo_link">
+            <%=image_tag image, width:250, height:250, onclick:"onClickImage(this)"%>
+          </div>
         <%end%>
       </div>
       <h4>
@@ -39,6 +47,6 @@
           <%= button_to "Підписатись на подію", event_event_subscribes_path(@event), class:"btn btn-success", method: :post %>
         <% end %>
       <% else %>
-        <h4 class"p-2">Для того, щоб підписатись на подію, вам слід
+        <h4 class"p-2"="class" p-2""="p-2""">Для того, щоб підписатись на подію, вам слід
           <%= link_to "увійти", user_session_path%></h4>
       <% end %>

@@ -23,9 +23,7 @@
     }
   </style>
   <%= render "layouts/navbar"%>
-  <% if controller_name == "events" && action_name == "show"%>
-    <%= render "layouts/modals/one_photo_form"%>
-  <%end%>
+  <%= render "layouts/modals/photo_form"%>
   <body>
     <main style="min-height: 89vh;">
       <%= yield %>
