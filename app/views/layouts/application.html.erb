@@ -23,6 +23,11 @@
     }
   </style>
   <%= render "layouts/navbar"%>
+  <%= form_tag search_path, :method => :get do%>
+  <%= text_field_tag :start_date, params[:start_date]%>
+  <%= text_field_tag :end_date, params[:end_date]%>
+  <%= submit_tag "Search", :class => "btn btn-primary"%>
+<% end %>
   <% if controller_name == "events" && action_name == "show"%>
     <%= render "layouts/modals/one_photo_form"%>
   <%end%>
