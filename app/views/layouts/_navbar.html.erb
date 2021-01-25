@@ -22,7 +22,13 @@
         <% end %>
         <%if user_signed_in?%>
           <span class="text-dark"><%= link_to t("navbar.sign_out"), destroy_user_session_path, method: :delete, :class => 'btn btn-warning' %></span>
-        <% end %>
+          <% end %>
+        <%= form_tag search_path, :method => :get do%>
+        <%= text_field_tag :begin_date, params[:begin_date]%>
+        <%= text_field_tag :end_date, params[:end_date]%>
+        <%= submit_tag "Search", :class => "btn btn-primary"%>
+        <%end%>
       </div>
     </div>
+
   </nav>

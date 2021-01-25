@@ -6,6 +6,11 @@ class EventsController < ApplicationController
   def show
       event
   end
+  def search
+  end_date = params[:end_date]
+  begin_date = params[:begin_date]
+  @events = Event.where('end_date <= ? AND begin_date >= ?',end_date, begin_date)
+  end
   private
 
   def event
