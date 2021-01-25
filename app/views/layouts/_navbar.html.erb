@@ -17,7 +17,7 @@
       </ul>
       <div class="form-inline my-2 my-lg-0">
         <% if !(user_signed_in?) %>
-        <span class="text-dark"><%= link_to t("navbar.sign_in"), user_session_path, :class => 'btn btn-warning' %></span>
+          <span class="text-dark"><%= link_to t("navbar.sign_in"), user_session_path, :class => 'btn btn-warning' %></span>
           <span class="text-dark"><%= link_to t("navbar.sign_up"), new_user_registration_path, :class => 'btn btn-warning' %></span>
         <% end %>
         <%if user_signed_in?%>
@@ -25,5 +25,4 @@
         <% end %>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>

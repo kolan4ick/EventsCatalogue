@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
   scope '/(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
-  devise_for :users
-  resources :users, only: [:show]
-    get 'events/index'
-    get 'pages/archive'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  root to: 'pages#index'
+  resources :events do
     resources :event_subscribes
-    resources :events do
-      resources :event_subscribes
-    end
-    # get 'events/index'
-    # get 'events/show'
-    # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-    resources :events, only: %i[index show]
-    root to: 'pages#index'
   end
+<<<<<<< HEAD
   #clear_commit
   ActiveAdmin.routes(self)
+=======
+    devise_for :users
+    resources :event_subscribes
+    resources :users, only: [:show]
+    get 'pages/archive'
+    get :search, to: 'events#search'
+    ActiveAdmin.routes(self)
+  end
+>>>>>>> 3624dee8545d6df7752a04c39aa80904e6ac4495
 end

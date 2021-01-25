@@ -269,59 +269,31 @@ ru:
   uk:                               UA
   ru:                               RU
   en:                               EN
-  time:
-    formats:
-      long:                         "%Y-%m-%d %H:%M:%S"
-  home_page:
-    subtitle:                       НАДЁЖНЫЙ ПЕРЕВОЗЧИК ГРУЗОВ ВСЕХ ТИПОВ ПО УКРАИНЕ И СТРАНАХ ЕС С БОЛЬШИМ ОПЫТОМ РАБОТЫ
-  cargo_types:
-    title:                          "Что перевозим"
-  why_we:
-    title:                          "Почему мы?"
-  fleet:
-    title:                          Наш автопарк
-  images:
-    title:                          Доставленные грузы
-  our_services:
-    title:                          Наши услуги
-  advantages:
-    title:                          Наши преимущества
-  feedback:
-    title: Отзывы
-  button:
-    other_services:                 Другие услуги
-    call_we: Связаться с нами
-    pick_up_a_car: Подобрать машину
-    feedbacks: Оставить отзыв
   navbar:
-    services: Наши услуги
-    cargo_types: Что перевозим
-    fleet: Наш автопарк
-    images: Доставленные грузы
-    contact: Контакты
-  call_we_form:
-    title: Введите ваши данные
-    name: Ваше имя
-    phone: Номер телефона
-    email: E-mail
-    text: Комментарий
-    send: Отправить
-  pick_up_a_car_form:
-    title: Подобрать машину
-    description: Заполните форму и мы свяжемся с Вами в ближайшее время
-    name: Ваше имя
-    phone: Номер телефона
-    send: Подобрать машину
-  calculation_sheet_form:
-    title: Рассчитайте стоимость доставки груза
-    cargo_type: Тип груза
-    weight: Вес
-    volume: Объем
-    length: Длина
-    height: Высота
-  feedback_form:
-    title: Отзыв
-    stars: На сколько вы довольны нашими услугами
-    phone: Номер телефона
-    pib: ФИО
-    body: Сообщение
+    title: Каталог Событий
+    events: Cобытия
+    archive: Архив
+    sign_in: Войти
+    sign_up: Зарегистрироваться
+    sign_out: Выйти
+  views:
+    home_page:
+      subtitle: Главная страница
+    pagination:
+      next: "Следующая"
+      previous: "Предыдущая"
+      first: "Первая"
+      last: "Последняя"
+    events:
+      show:
+        name: "Название:"
+        body: "Описание:"
+        place: "Место:"
+        images: "Изображения:"
+        begin_date: "Дата начала:"
+        end_date: "Дата окончания:"
+        button:
+          subscribe: Подписаться
+          unsubscribe: Отписаться
+          sign_in: войти
+        tip: Для того, чтоб подписаться на событие, вам следует

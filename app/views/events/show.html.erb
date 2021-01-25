@@ -6,7 +6,7 @@
 </script>
 <div class="m-3">
   <h1>
-    Назва:
+    <%= t("views.events.show.name") %>
     <%=@event.name%>
     <h1>
       <div type="button" class="photo_link">
@@ -15,14 +15,14 @@
         </p>
       </div>
       <h4>
-        Опис:
+        <%= t("views.events.show.body") %>
         <%=@event.body%>
       </h4>
       <h4>
-        Місце:
+        <%= t("views.events.show.place") %>
         <%=@event.place%>
       </h4>
-      <h4>Зображення:</h4>
+      <h4><%= t("views.events.show.images") %></h4>
       <div class="col-9">
         <%@event.images.each do |image|%>
           <div type="button" class="photo_link">
@@ -31,11 +31,11 @@
         <%end%>
       </div>
       <h4>
-        Дата початку:
+        <%= t("views.events.show.begin_date") %>
         <%=@event.begin_date%>
       </h4>
       <h4>
-        Дата закінчення:
+        <%= t("views.events.show.end_date") %>
         <%=@event.end_date%>
       </h4>
     </div>
@@ -43,12 +43,12 @@
       <% if user_signed_in? %>
         <% pre_event = @event.event_subscribes.find { |eventsub| eventsub.user_id == current_user.id && eventsub.event_id == @event.id} %>
           <% if pre_event %>
-            <%= button_to "Відписатись від події", event_event_subscribe_path(@event, pre_event), class:"btn btn-danger", method: :delete %>
+            <%= button_to t("views.events.show.button.unsubscribe"), event_event_subscribe_path(@event, pre_event), class:"btn btn-danger", method: :delete %>
           <% else %>
-            <%= button_to "Підписатись на подію", event_event_subscribes_path(@event), class:"btn btn-success", method: :post %>
+            <%= button_to t("views.events.show.button.subscribe"), event_event_subscribes_path(@event), class:"btn btn-success", method: :post %>
           <% end %>
         <% else %>
-          <h4 class"p-2"="class" p-2""="p-2" "">Для того, щоб підписатись на подію, вам слід
-            <%= link_to "увійти", user_session_path%></h4>
+          <h4 class"p-2"="class" p-2""="p-2" ""><%= t("events.show.tip") %>
+            <%= link_to t("views.events.show.button.sign_in"), user_session_path%></h4>
         <% end %>
       <% end %>
