@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show]
   get 'events/index'
+  get 'pages/archive'
   resources :event_subscribes
   resources :events do
     resources :event_subscribes

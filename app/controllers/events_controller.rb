@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.order(:name).page(params[:page]).per($PERPAGE).with_attached_images
+    @events = Event.where('end_date >= ?',Time.now).page(params[:page]).per($PERPAGE).with_attached_images
   end
 
   def show

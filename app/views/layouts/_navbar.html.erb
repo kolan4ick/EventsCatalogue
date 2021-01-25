@@ -11,17 +11,19 @@
         <li class="nav-item">
           <a class="nav-link" href="<%= events_path %>">Events</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= pages_archive_path %>">Archive</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
         <% if !(user_signed_in?) %>
-          <span class="text-dark"style="padding-left: 1430px;"><%= link_to "Увійти", user_session_path, :class => 'btn btn-warning' %></span>
-          <span class="text-dark"style="padding-left: 10px;"><%= link_to "Зареєструватись", new_user_registration_path, :class => 'btn btn-warning' %></span>
+          <span class="text-dark"><%= link_to "Увійти", user_session_path, :class => 'btn btn-warning' %></span>
+          <span class="text-dark"><%= link_to "Зареєструватись", new_user_registration_path, :class => 'btn btn-warning' %></span>
         <% end %>
         <%if user_signed_in?%>
-          <span class="text-dark"style="padding-left: 1590px;"><%= link_to "Вийти", destroy_user_session_path, method: :delete, :class => 'btn btn-warning' %></span>
+          <span class="text-dark"><%= link_to "Вийти", destroy_user_session_path, method: :delete, :class => 'btn btn-warning' %></span>
         <% end %>
-      </ul>
-      <span class="navbar-text">
-        <!-- треба буде покласти пошук тут -->
-      </span>
+      </div>
     </div>
   </div>
 </nav>

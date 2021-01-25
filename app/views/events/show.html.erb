@@ -39,14 +39,16 @@
         <%=@event.end_date%>
       </h4>
     </div>
-    <% if user_signed_in? %>
-      <% pre_event = @event.event_subscribes.find { |eventsub| eventsub.user_id == current_user.id && eventsub.event_id == @event.id} %>
-        <% if pre_event %>
-          <%= button_to "Відписатись від події", event_event_subscribe_path(@event, pre_event), class:"btn btn-danger", method: :delete %>
+    <% if @event.end_date >= Time.now %>
+      <% if user_signed_in? %>
+        <% pre_event = @event.event_subscribes.find { |eventsub| eventsub.user_id == current_user.id && eventsub.event_id == @event.id} %>
+          <% if pre_event %>
+            <%= button_to "Відписатись від події", event_event_subscribe_path(@event, pre_event), class:"btn btn-danger", method: :delete %>
+          <% else %>
+            <%= button_to "Підписатись на подію", event_event_subscribes_path(@event), class:"btn btn-success", method: :post %>
+          <% end %>
         <% else %>
-          <%= button_to "Підписатись на подію", event_event_subscribes_path(@event), class:"btn btn-success", method: :post %>
+          <h4 class"p-2"="class" p-2""="p-2" "">Для того, щоб підписатись на подію, вам слід
+            <%= link_to "увійти", user_session_path%></h4>
         <% end %>
-      <% else %>
-        <h4 class"p-2"="class" p-2""="p-2""">Для того, щоб підписатись на подію, вам слід
-          <%= link_to "увійти", user_session_path%></h4>
       <% end %>
