@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     resources :events, only: %i[index show]
     root to: 'pages#index'
   end
+  #clear_commit
   ActiveAdmin.routes(self)
 end
