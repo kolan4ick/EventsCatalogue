@@ -17,19 +17,12 @@
       </ul>
       <div class="form-inline my-2 my-lg-0">
         <% if !(user_signed_in?) %>
-        <span class="text-dark"><%= link_to t("navbar.sign_in"), user_session_path, :class => 'btn btn-warning' %></span>
+          <span class="text-dark"><%= link_to t("navbar.sign_in"), user_session_path, :class => 'btn btn-warning' %></span>
           <span class="text-dark"><%= link_to t("navbar.sign_up"), new_user_registration_path, :class => 'btn btn-warning' %></span>
         <% end %>
         <%if user_signed_in?%>
           <span class="text-dark"><%= link_to t("navbar.sign_out"), destroy_user_session_path, method: :delete, :class => 'btn btn-warning' %></span>
         <% end %>
-      <span class="navbar-text">
-        <!-- треба буде покласти пошук тут -->
-        <%= form_tag search_path, method: :get, class: "navbar-form navbar-left search-form" do %>
-        <%= text_field_tag( :search, params[:search], placeholder: t("navbar.search.placeholder"), class: "" ) %>
-        <%= select_tag "filter", options_for_select(['1', '2', '5', '10', '15', '20', '25', '40', '49','75','100','150'], @filter), onchange:"clickSubmit();", class: 'custom-select', prompt: t("navbar.select.price") %>
-      <% end %>
-      </span>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
