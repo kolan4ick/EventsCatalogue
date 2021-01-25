@@ -23,11 +23,16 @@
     }
   </style>
   <%= render "layouts/navbar"%>
-  <%= render "layouts/modals/photo_form"%>
-  <body>
-    <main style="min-height: 89vh;">
-      <%= yield %>
-    </main>
-  </body>
-  <%= render "layouts/footer"%>
+  <%= form_tag search_path, :method => :get do%>
+  <%= text_field_tag :start_date, params[:start_date]%>
+  <%= text_field_tag :end_date, params[:end_date]%>
+  <%= submit_tag "Search", :class => "btn btn-primary"%>
+<% end %>
+<%= render "layouts/modals/photo_form"%>
+<body>
+  <main style="min-height: 89vh;">
+    <%= yield %>
+  </main>
+</body>
+<%= render "layouts/footer"%>
 </html>
