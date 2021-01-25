@@ -215,56 +215,31 @@ en:
   uk:                               UA
   ru:                               RU
   en:                               EN
-  time:
-  home_page:
-    subtitle:                       RELIABLE CARRIER OF CARGO OF ALL TYPES IN UKRAINE AND EU COUNTRIES WITH EXPENSIVE WORK EXPERIENCE
-  cargo_types:
-    title:                          "What carry"
-  why_we:
-    title:                          "Why we?"
-  fleet:
-    title:                          Our car fleet
-  images:
-    title:                          Delivered cargo
-  our_services:
-    title:                          Our services
-  advantages:
-    title:                          Our advantages
-  feedback:
-    title: Feedbacks
-  button:
-    other_services:                 Other services
-    call_we: Contact us
-    pick_up_a_car: Pick up a car
-    feedbacks: Leave feedback
   navbar:
-    services: Our services
-    cargo_types: What carry
-    fleet: Our car fleet
-    images: Delivered cargo
-  call_we_form:
-    title: Enter your details
-    name: Your name
-    phone: Phone number
-    email: E-mail
-    text: Comment
-    send: Send
-  pick_up_a_car_form:
-    title: Pick up a car
-    description: Fill out the form and we will contact you shortly
-    name: Your name
-    phone: Phone number
-    send: Pick up a car
-  calculation_sheet_form:
-    title: Calculate the cargo cost
-    cargo_type: Cargo type
-    weight: Weight
-    volume: Volume
-    length: Length
-    height: Height
-  feedback_form:
-    title: Feedback
-    stars: How satisfied are you with our services
-    phone: Phone number
-    pib: Full name
-    body: Message
+    title: Event Catalogue
+    events: Events
+    archive: Archive
+    sign_in: Log in
+    sign_up: Register now
+    sign_out: Log out
+  views:
+    home_page:
+      subtitle: Main page
+    pagination:
+      next: "Next"
+      previous: "Previous"
+      first: "First"
+      last: "Last"
+    events:
+      show:
+        name: "Name:"
+        body: "Description:"
+        place: "Place:"
+        images: "Images:"
+        begin_date: "Start date:"
+        end_date: "Expiration date:"
+        button:
+          subscribe: Subscribe
+          unsubscribe: unsubscribe
+          sign_in: login
+        tip: In order to subscribe to the event, you should 

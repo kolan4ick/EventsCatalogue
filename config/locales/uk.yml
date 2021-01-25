@@ -266,17 +266,31 @@ uk:
   uk:                               UA
   ru:                               RU
   en:                               EN
-  home_page:
-    subtitle:                       НАДІЙНИЙ ПЕРЕВІЗНИК ВАНТАЖІВ УСІХ ТИПІВ ПО УКРАЇНІ ТА КРАЇНАХ ЄС З ВЕЛИКИМ ДОСВІДОМ РОБОТИ
-  button:
-    other_services:                 Інші послуги
-    call_we: Зв'язатись з нами
-    pick_up_a_car: Підібрати машину
-    feedbacks: Залишити відгук
   navbar:
     title: Каталог Подій
     events: Події
     archive: Архів
-    fleet: Наш автопарк
-    images: Доставлені вантажі
-    contact: Контакти
+    sign_in: Увійти
+    sign_up: Зареєструватись
+    sign_out: Вийти
+  views:
+    home_page:
+      subtitle: Головна сторінка
+    pagination:
+      next: "Наступна"
+      previous: "Попередня"
+      first: "Перша"
+      last: "Остання"
+    events:
+      show:
+        name: "Назва:"
+        body: "Опис:"
+        place: "Місце:"
+        images: "Зображення:"
+        begin_date: "Дата початку:"
+        end_date: "Дата закінчення:"
+        button:
+          subscribe: Підписатись
+          unsubscribe: Відписатись
+          sign_in: увійти
+        tip: Для того, щоб підписатись на подію, вам слід
