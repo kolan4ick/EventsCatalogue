@@ -9,22 +9,21 @@ class EventsController < ApplicationController
   def search
     @search = params[:search]
 
-    data_filter
     type_filter
+    data_filter
     @events = @events.where("place LIKE '%#{params[:search]}%'").page(params[:page]).per($PERPAGE).with_attached_images
   end
   private
   def type_filter
-    @filter = params[:filter]
-
-    @events = Event.where(price: @filter)
+    @price_type = params[:price_type]
+    @events = (@price_type == '' ? Event.all : @events.where(price: @price_type))
   end
 
 def data_filter
-  end_date = params[:end_date]
-  begin_date = params[:begin_date]
-  if begin_date != '' || end_date != ''
-  @events = Event.where('end_date <= ? AND begin_date >= ?',end_date, begin_date)
+  @end_date = params[:end_date]
+  @begin_date = params[:begin_date]
+  if @begin_date != '' || @end_date != ''
+  @events = Event.where('end_date <= ? AND begin_date >= ?', @end_date.to_date, @begin_date.to_date)
 else
   @events = Event.order(:name).page(params[:page]).per($PERPAGE).with_attached_images
 end

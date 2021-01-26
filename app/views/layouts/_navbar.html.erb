@@ -15,26 +15,26 @@
           <a class="nav-link" href="<%= pages_archive_path %>"><%= t("navbar.archive") %></a>
         </li>
       </ul>
-      <div class="form-inline my-2 my-lg-0" >
+      <div class="form-inline my-2 my-lg-0">
         <%= form_tag search_path, :method => :get do%>
         <%= text_field_tag( :search, params[:search], placeholder: t("navbar.search.placeholder"), class: "" ) %>
-        <%= select_tag :begin_date,options_for_select(('2020-01-01'.to_date..'2025-12-31'.to_date).to_a,@filter), class: 'custom-select',prompt: "Start Date" %>
-        <%= select_tag :end_date,options_for_select(('2020-01-01'.to_date..'2025-12-31'.to_date).to_a,@filter), class: 'custom-select',prompt: "End Date" %>
-        <%= select_tag "filter", options_for_select([["Платні",true],["Безкоштовні",false]],@filter), class: 'custom-select', prompt: "Type"  %>
+        <%= select_tag :begin_date, options_for_select(('2021-01-01'.to_date..'2022-12-31'.to_date).to_a, @begin_date), class: 'custom-select',prompt: "Start Date" %>
+        <%= select_tag :end_date, options_for_select(('2021-01-01'.to_date..'2022-12-31'.to_date).to_a, @end_date), class: 'custom-select',prompt: "End Date" %>
+        <%= select_tag :price_type, options_for_select([["Платні",true],["Безкоштовні",false]], @price_type), class: 'custom-select', prompt: "Type" %>
         <%= submit_tag "Search", :class => "btn btn-primary"%>
-        <%end%>
-
-      </div>
-      <div class="form-inline my-2 my-lg-0" style="padding-left:20px">
-        <% if !(user_signed_in?) %>
-          <span class="text-dark"><%= link_to t("navbar.sign_in"), user_session_path, :class => 'btn btn-warning' %></span>
-          <span class="text-dark"><%= link_to t("navbar.sign_up"), new_user_registration_path, :class => 'btn btn-warning' %></span>
-        <% end %>
-        <%if user_signed_in?%>
-        <span class="text-dark"><%= link_to t("navbar.sign_out"), destroy_user_session_path, method: :delete, :class => 'btn btn-warning' %></span>
-        <% end %>
-      </div>
+      <%end%>
 
     </div>
+    <div class="form-inline my-2 my-lg-0" style="padding-left:20px">
+      <% if !(user_signed_in?) %>
+        <span class="text-dark"><%= link_to t("navbar.sign_in"), user_session_path, :class => 'btn btn-warning' %></span>
+        <span class="text-dark"><%= link_to t("navbar.sign_up"), new_user_registration_path, :class => 'btn btn-warning' %></span>
+      <% end %>
+      <%if user_signed_in?%>
+        <span class="text-dark"><%= link_to t("navbar.sign_out"), destroy_user_session_path, method: :delete, :class => 'btn btn-warning' %></span>
+      <% end %>
+    </div>
 
-  </nav>
+  </div>
+
+</nav>

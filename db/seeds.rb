@@ -13,6 +13,7 @@ events = []
     end_date: Faker::Date.in_date_period,
     begin_date: Faker::Date.in_date_period,
     body: Faker::Movie.title,
+    price: Faker::Boolean.boolean,
     # age_limit: Faker::Number.within(range: 1..21),
     place: Faker::Nation.capital_city,
     set_image: 'https://picsum.photos/2048'
