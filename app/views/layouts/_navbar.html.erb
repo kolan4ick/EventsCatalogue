@@ -18,9 +18,9 @@
       <div class="form-inline my-2 my-lg-0" >
         <%= form_tag search_path, :method => :get do%>
         <%= text_field_tag( :search, params[:search], placeholder: t("navbar.search.placeholder"), class: "" ) %>
-        <%= text_field_tag :begin_date, params[:begin_date], size:5%>
-        <%= text_field_tag :end_date, params[:end_date], size:5%>
-        <%= select_tag "filter", options_for_select([["Платні",true],["Безкоштовні",false]],@filter), class: 'custom-select' %>
+        <%= select_tag :begin_date,options_for_select(('2020-01-01'.to_date..'2025-12-31'.to_date).to_a,@filter), class: 'custom-select',prompt: "Start Date" %>
+        <%= select_tag :end_date,options_for_select(('2020-01-01'.to_date..'2025-12-31'.to_date).to_a,@filter), class: 'custom-select',prompt: "End Date" %>
+        <%= select_tag "filter", options_for_select([["Платні",true],["Безкоштовні",false]],@filter), class: 'custom-select', prompt: "Type"  %>
         <%= submit_tag "Search", :class => "btn btn-primary"%>
         <%end%>
 
