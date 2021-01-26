@@ -22,6 +22,14 @@
         <%= t("views.events.show.place") %>
         <%=@event.place%>
       </h4>
+      <h4>
+        <%=t("views.events.show.type.title")%>
+        <%if @event.price%>
+        <%=t("views.events.show.type.true")%>
+        <%else%>
+        <%=t("views.events.show.type.false")%>
+        <%end%>
+      </h4>
       <h4><%= t("views.events.show.images") %></h4>
       <div class="col-9">
         <%@event.images.each do |image|%>

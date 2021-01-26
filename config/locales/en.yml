@@ -216,12 +216,16 @@ en:
   ru:                               RU
   en:                               EN
   navbar:
+    #navbar.search.placeholder
+    #views.events.show.price.false
     title: Event Catalogue
     events: Events
     archive: Archive
     sign_in: Log in
     sign_up: Register now
     sign_out: Log out
+    search:
+      placeholder: Search
   views:
     home_page:
       subtitle: Main page
@@ -238,8 +242,12 @@ en:
         images: "Images:"
         begin_date: "Start date:"
         end_date: "Expiration date:"
+        type:
+          title: "Type: "
+          true: Paid
+          false: Free
         button:
           subscribe: Subscribe
           unsubscribe: unsubscribe
           sign_in: login
-        tip: In order to subscribe to the event, you should 
+        tip: In order to subscribe to the event, you should
