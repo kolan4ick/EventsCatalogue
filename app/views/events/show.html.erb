@@ -31,7 +31,7 @@
         <%end%>
       </h4>
       <h4><%= t("views.events.show.images") if @event.images.count>0%></h4>
-      <div class="col-9">
+      <div class="col-8">
         <%@event.images.each do |image|%>
           <div type="button" class="photo_link">
             <%=image_tag image, width:250, height:250, onclick:"onClickImage(this)"%>
