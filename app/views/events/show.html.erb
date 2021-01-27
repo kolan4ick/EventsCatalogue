@@ -30,7 +30,7 @@
         <%=t("views.events.show.type.false")%>
         <%end%>
       </h4>
-      <h4><%= t("views.events.show.images") %></h4>
+      <h4><%= t("views.events.show.images") if @event.images.count>0%></h4>
       <div class="col-9">
         <%@event.images.each do |image|%>
           <div type="button" class="photo_link">
@@ -45,6 +45,14 @@
       <h4>
         <%= t("views.events.show.end_date") %>
         <%=@event.end_date%>
+      </h4>
+      <h4>
+        <%=t("views.events.show.orgranizator")%>
+        <%= @event.orgranizator%>
+      </h4>
+      <h4>
+        <%= t("views.events.show.count")%>
+        <%= @event.event_subscribes.size%>
       </h4>
     </div>
     <% if @event.end_date >= Time.now %>

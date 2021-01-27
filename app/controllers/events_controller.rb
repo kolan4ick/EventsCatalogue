@@ -8,16 +8,18 @@ class EventsController < ApplicationController
   end
   def search
     @search = params[:search]
-    # @events = Event.all
     type_filter
     data_filter
     @events = @events.where("place LIKE '%#{params[:search]}%'").page(params[:page]).per($PERPAGE).with_attached_images
   end
   private
+
   def type_filter
-    @price_type = params[:price_type]
-    if !(@price_type.eql? '')
-      @events = Event.where(price: @price_type)
+    @price = params[:price_type]
+    if @price ==""
+      @events = Event.all
+    else
+        @events =Event.where(price: @price )
     end
   end
 

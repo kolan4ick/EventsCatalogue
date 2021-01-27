@@ -273,6 +273,17 @@ uk:
     sign_in: Увійти
     sign_up: Зареєструватись
     sign_out: Вийти
+    search:
+      bt:
+        title: "Шукати"
+      date:
+        start: "Дата початку"
+        end: "Дата кінця"
+      type:
+        title: "Тип"
+        paid: "Платні"
+        free: "Безкоштовні"
+      placeholder: Пошук
   views:
     home_page:
       subtitle: Головна сторінка
@@ -287,8 +298,14 @@ uk:
         body: "Опис:"
         place: "Місце:"
         images: "Зображення:"
+        type:
+          title: "Тип: "
+          true: Платні
+          false: Безкоштовні
         begin_date: "Дата початку:"
         end_date: "Дата закінчення:"
+        orgranizator: "Організатор: "
+        count: "Кількість можливих відвідувачів: "
         button:
           subscribe: Підписатись
           unsubscribe: Відписатись

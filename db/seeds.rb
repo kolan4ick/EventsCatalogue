@@ -16,6 +16,7 @@ events = []
     price: Faker::Boolean.boolean,
     # age_limit: Faker::Number.within(range: 1..21),
     place: Faker::Nation.capital_city,
+    orgranizator: Faker::Name.name,
     set_image: 'https://picsum.photos/2048'
   }
 end

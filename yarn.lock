@@ -836,10 +836,10 @@
     mkdirp "^1.0.4"
     rimraf "^2.7.1"
 
-"@popperjs/core@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.6.0.tgz#f022195afdfc942e088ee2101285a1d31c7d727f"
-  integrity sha512-cPqjjzuFWNK3BSKLm0abspP0sp/IGOli4p5I5fKFAzdS8fvjdOwDCfZqAaIiXd9lPkOWi3SUUfZof3hEb7J/uw==
+"@popperjs/core@^2.0.0-next.17":
+  version "2.0.0-next.17"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.0.0-next.17.tgz#0b6a09baa6164c3a17368273a94f3b3825c558b1"
+  integrity sha512-4BWcPuFra/zuQEE/IbnBhnB65hEQNGdxcL4ASGeFDJUR6d5/BC7E6Zm/SzpOvMTBKzo/4hs3KLGheYff19PX/w==
 
 "@rails/actioncable@^6.0.0":
   version "6.1.1"
