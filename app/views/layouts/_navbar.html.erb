@@ -20,7 +20,7 @@
         <%= text_field_tag( :search, params[:search], placeholder: t("navbar.search.placeholder"), class: "" ) %>
         <%= select_tag :begin_date, options_for_select(('2021-01-01'.to_date..'2022-12-31'.to_date).to_a, @begin_date), class: 'custom-select',prompt: "Start Date" %>
         <%= select_tag :end_date, options_for_select(('2021-01-01'.to_date..'2022-12-31'.to_date).to_a, @end_date), class: 'custom-select',prompt: "End Date" %>
-        <%= select_tag :price_type, options_for_select([["Платні",true],["Безкоштовні",false]], @price_type), class: 'custom-select', prompt: "Type" %>
+        <%= select_tag :price_type, options_for_select([["Платні",true],["Безкоштовні",false]], @price), class: 'custom-select', prompt: "Type" %>
         <%= submit_tag "Search", :class => "btn btn-primary"%>
       <%end%>
 
