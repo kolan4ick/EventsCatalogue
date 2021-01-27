@@ -266,6 +266,8 @@ uk:
   uk:                               UA
   ru:                               RU
   en:                               EN
+  index:
+    title: "Події"
   navbar:
     title: Каталог Подій
     events: Події

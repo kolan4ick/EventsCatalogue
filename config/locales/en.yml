@@ -215,6 +215,8 @@ en:
   uk:                               UA
   ru:                               RU
   en:                               EN
+  index:
+    title: "Events"
   navbar:
     #navbar.search.placeholder
     #views.events.show.price.false
