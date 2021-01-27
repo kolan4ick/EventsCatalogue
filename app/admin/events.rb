@@ -4,12 +4,13 @@ ActiveAdmin.register Event do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :end_date, :begin_date, :body, :price, :place, :avatar, photos:[]
+  permit_params :name, :end_date, :begin_date, :body, :price, :place, :avatar,:orgranizator, photos:[]
   form do |f|
     f.inputs do
       f.input :name
       f.input :body, as: :text
       f.input :place
+      f.input :orgranizator
       f.input :price
       f.input :begin_date
       f.input :end_date
@@ -25,6 +26,7 @@ ActiveAdmin.register Event do
       row :body
       row :place
       row :price
+      row :orgranizator
       row :begin_date
       row :end_date
       row :avatar do |object|

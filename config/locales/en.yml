@@ -225,6 +225,15 @@ en:
     sign_up: Register now
     sign_out: Log out
     search:
+      bt:
+        title: "Search"
+      date:
+        start: "Start date"
+        end: "End date"
+      type:
+        title: "Type"
+        paid: "Paid"
+        free: "Free"
       placeholder: Search
   views:
     home_page:
@@ -242,6 +251,8 @@ en:
         images: "Images:"
         begin_date: "Start date:"
         end_date: "Expiration date:"
+        orgranizator: "Organizer: "
+        count: "Number of possible visitors: "
         type:
           title: "Type: "
           true: Paid
