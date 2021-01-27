@@ -269,6 +269,8 @@ ru:
   uk:                               UA
   ru:                               RU
   en:                               EN
+  index:
+    title: "Cобытия"
   navbar:
     title: Каталог Событий
     events: Cобытия
@@ -276,6 +278,17 @@ ru:
     sign_in: Войти
     sign_up: Зарегистрироваться
     sign_out: Выйти
+    search:
+      bt:
+        title: "Поиск"
+      date:
+        start: "Дата начала"
+        end: "Дата окончания"
+      type:
+        title: "Тип"
+        paid: "Платные"
+        free: "Бесплатные"
+      placeholder: "Поиск"
   views:
     home_page:
       subtitle: Главная страница
@@ -286,7 +299,13 @@ ru:
       last: "Последняя"
     events:
       show:
+        type:
+          title: "Тип: "
+          true: Платные
+          false: Бесплатные
         name: "Название:"
+        orgranizator: "Организатор: "
+        count: "Количество возможных посетителей: "
         body: "Описание:"
         place: "Место:"
         images: "Изображения:"
@@ -296,4 +315,22 @@ ru:
           subscribe: Подписаться
           unsubscribe: Отписаться
           sign_in: войти
+          sign_up: зарегистрироваться
         tip: Для того, чтоб подписаться на событие, вам следует
+        tipor: или
+    modals:
+      sign_in:
+        title: Войти
+        email: E-mail
+        password: Пароль
+        remember_me: Запомнить меня
+        button:
+          log_in: Войти
+      sign_up:
+        title: Регистрация
+        email: E-mail
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        button:
+          register: Зарегистрироваться
+      error: "Неверный E-mail/пароль. Просмотрите следующие ошибки:"

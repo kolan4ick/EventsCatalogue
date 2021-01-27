@@ -10,7 +10,13 @@ module EventsCatalogue
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
-    config.i18n.default_locale = :uk
+    # Locales
+    config.i18n.available_locales = %i[uk ru en]
+    config.before_configuration do
+      I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+      I18n.default_locale = :uk
+      I18n.reload!
+    end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

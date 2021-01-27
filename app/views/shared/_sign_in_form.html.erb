@@ -2,19 +2,19 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Please Log in</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><%= t("views.modals.sign_in.title") %></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" align="center">
         <div class="errors_sign_in"></div>
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), remote: true) do |f| %>
         <div class="form-inputs">
-          <%= f.input :email, label:false, placeholder: t("views.modals.email"), autofocus: true, input_html: { autocomplete: "email" } %>
-          <%= f.input :password, label:false, placeholder: t("views.modals.password"), input_html: { autocomplete: "current-password" } %>
-          <%= f.input :remember_me, as: :boolean, label:t("views.modals.remember_me") if devise_mapping.rememberable?%>
+          <%= f.input :email, label:false, placeholder: t("views.modals.sign_in.email"), autofocus: true, input_html: { autocomplete: "email" } %>
+          <%= f.input :password, label:false, placeholder: t("views.modals.sign_in.password"), input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean, label:t("views.modals.sign_in.remember_me") if devise_mapping.rememberable?%>
         </div>
         <div class="modal-footer">
-          <%= f.button :submit, t("views.modals.button.log_in"), class: "btn btn-primary" %>
+          <%= f.button :submit, t("views.modals.sign_in.button.log_in"), class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>

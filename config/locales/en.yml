@@ -263,4 +263,22 @@ en:
           subscribe: Subscribe
           unsubscribe: unsubscribe
           sign_in: login
+          sign_up: register
         tip: In order to subscribe to the event, you should
+        tipor: or
+    modals:
+      sign_in:
+        title: Login
+        email: E-mail
+        password: Password
+        remember_me: Remember me
+        button:
+          log_in: Login
+      sign_up:
+        title: Register
+        email: E-mail
+        password: Password
+        password_confirmation: Password confirmation
+        button:
+          register: Register
+      error: "Incorrect Email/Password. Please review the errors below:"

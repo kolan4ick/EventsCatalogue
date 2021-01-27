@@ -277,7 +277,7 @@ uk:
     sign_out: Вийти
     search:
       bt:
-        title: "Шукати"
+        title: "Пошук"
       date:
         start: "Дата початку"
         end: "Дата кінця"
@@ -312,10 +312,22 @@ uk:
           subscribe: Підписатись
           unsubscribe: Відписатись
           sign_in: увійти
+          sign_up: зареєструватись
         tip: Для того, щоб підписатись на подію, вам слід
+        tipor: або
     modals:
-      email: E-mail
-      password: Пароль
-      remember_me: Запам'ятати мене
-      button:
-        log_in: Увійти
+      sign_in:
+        title: Увійти
+        email: E-mail
+        password: Пароль
+        remember_me: Запам'ятати мене
+        button:
+          log_in: Увійти
+      sign_up:
+        title: Реєстрація
+        email: E-mail
+        password: Пароль
+        password_confirmation: Підтвердження пароля
+        button:
+          register: Зареєструватись
+      error: "Неправильний E-mail/пароль. Будь ласка, перегляньте помилки нижче:"

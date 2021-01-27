@@ -25,9 +25,9 @@
       <h4>
         <%=t("views.events.show.type.title")%>
         <%if @event.price%>
-        <%=t("views.events.show.type.true")%>
+          <%=t("views.events.show.type.true")%>
         <%else%>
-        <%=t("views.events.show.type.false")%>
+          <%=t("views.events.show.type.false")%>
         <%end%>
       </h4>
       <h4><%= t("views.events.show.images") if @event.images.count>0%></h4>
@@ -54,17 +54,23 @@
         <%= t("views.events.show.count")%>
         <%= @event.event_subscribes.size%>
       </h4>
-    </div>
-    <% if @event.end_date >= Time.now %>
-      <% if user_signed_in? %>
-        <% pre_event = @event.event_subscribes.find { |eventsub| eventsub.user_id == current_user.id && eventsub.event_id == @event.id} %>
-          <% if pre_event %>
-            <%= button_to t("views.events.show.button.unsubscribe"), event_event_subscribe_path(@event, pre_event), class:"btn btn-danger", method: :delete %>
+      <% if @event.end_date >= Time.now %>
+        <% if user_signed_in? %>
+          <% pre_event = @event.event_subscribes.find { |eventsub| eventsub.user_id == current_user.id && eventsub.event_id == @event.id} %>
+            <% if pre_event %>
+              <%= button_to t("views.events.show.button.unsubscribe"), event_event_subscribe_path(@event, pre_event), class:"btn btn-danger", method: :delete %>
+            <% else %>
+              <%= button_to t("views.events.show.button.subscribe"), event_event_subscribes_path(@event), class:"btn btn-success", method: :post %>
+            <% end %>
           <% else %>
-            <%= button_to t("views.events.show.button.subscribe"), event_event_subscribes_path(@event), class:"btn btn-success", method: :post %>
+            <h4 class"p-2"="class" p-2""="p-2" ""><%= t("views.events.show.tip") %>
+              <a href="" data-bs-toggle="modal" data-bs-target=".sign_in">
+                <%= t("views.events.show.button.sign_in") %>
+              </a>
+              <%= t("views.events.show.tipor") %>
+              <a href="" data-bs-toggle="modal" data-bs-target=".sign_up">
+                <%= t("views.events.show.button.sign_up") %>
+              </a>
+            <% end %>
           <% end %>
-        <% else %>
-          <h4 class"p-2"="class" p-2""="p-2" ""><%= t("views.events.show.tip") %>
-            <%= link_to t("views.events.show.button.sign_in"), user_session_path%></h4>
-        <% end %>
-      <% end %>
+        </div>
