@@ -294,3 +294,9 @@ uk:
           unsubscribe: Відписатись
           sign_in: увійти
         tip: Для того, щоб підписатись на подію, вам слід
+    modals:
+      email: E-mail
+      password: Пароль
+      remember_me: Запам'ятати мене
+      button:
+        log_in: Увійти

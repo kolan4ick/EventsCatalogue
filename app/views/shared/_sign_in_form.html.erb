@@ -1,0 +1,23 @@
+<div class="modal fade sign_in" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Please Log in</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" align="center">
+        <div class="errors_sign_in"></div>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), remote: true) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email, label:false, placeholder: t("views.modals.email"), autofocus: true, input_html: { autocomplete: "email" } %>
+          <%= f.input :password, label:false, placeholder: t("views.modals.password"), input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean, label:t("views.modals.remember_me") if devise_mapping.rememberable?%>
+        </div>
+        <div class="modal-footer">
+          <%= f.button :submit, t("views.modals.button.log_in"), class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

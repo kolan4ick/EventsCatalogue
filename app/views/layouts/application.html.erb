@@ -10,6 +10,7 @@
         display: inline-block;
       }
     </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "_footer"%>
@@ -22,12 +23,14 @@
       /* Цвет текста */
     }
   </style>
-  <%= render "layouts/navbar"%>
-  <%= render "layouts/modals/photo_form"%>
   <body>
+    <%= render "shared/navbar"%>
+    <%= render 'shared/sign_in_form' %>
+    <%= render 'shared/sign_up_form' %>
+    <%= render "shared/photo_form"%>
     <main style="min-height: 89vh;">
       <%= yield %>
     </main>
   </body>
-  <%= render "layouts/footer"%>
+  <%= render "shared/footer"%>
 </html>
