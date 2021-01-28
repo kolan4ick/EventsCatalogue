@@ -40,7 +40,7 @@
       </div>
       <h4>
         <%= t("views.events.show.begin_date") %>
-        <%=@event.begin_date%>
+        <%=@event.begin_date.to_date.day%>.<%=@event.begin_date.to_date.month%>.<%=@event.begin_date.to_date.year%>
       </h4>
       <h4>
         <%= t("views.events.show.end_date") %>
