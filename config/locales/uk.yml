@@ -328,6 +328,8 @@ uk:
         email: E-mail
         password: Пароль
         password_confirmation: Підтвердження пароля
+        nickname: Нікнейм
+        phone: Номер телефону
         button:
           register: Зареєструватись
       error: "Неправильний E-mail/пароль. Будь ласка, перегляньте помилки нижче:"

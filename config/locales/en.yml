@@ -279,6 +279,8 @@ en:
         email: E-mail
         password: Password
         password_confirmation: Password confirmation
+        nickname: Nickname
+        phone: Phone
         button:
           register: Register
       error: "Incorrect Email/Password. Please review the errors below:"
