@@ -20,12 +20,12 @@
         <%= text_field_tag( :search, params[:search], placeholder: t("navbar.search.placeholder"), class: "" ) %>
         <%= select_tag :begin_date, options_for_select(('2021-01-01'.to_date..'2022-12-31'.to_date).to_a, @begin_date), class: 'custom-select',prompt: t("navbar.search.date.start") %>
         <%= select_tag :end_date, options_for_select(('2021-01-01'.to_date..'2022-12-31'.to_date).to_a, @end_date), class: 'custom-select',prompt: t("navbar.search.date.end") %>
-        <%= select_tag :price_type, options_for_select([[t("navbar.search.type.paid"),true],[t("navbar.search.type.free"),false]], @price), class: 'custom-select', prompt: t("navbar.search.type.title")  %>
+        <%= select_tag :price_type, options_for_select([[t("navbar.search.type.paid"),true],[t("navbar.search.type.free"),false]], @price), class: 'custom-select', prompt: t("navbar.search.type.title") %>
         <%= submit_tag t("navbar.search.bt.title"), :class => "btn btn-warning"%>
       <%end%>
 
     </div>
-    <div class="form-inline my-2 my-lg-0" style="padding-left:20px">
+    <div class="form-inline my-2 my-lg-0" style="padding-left:10px">
       <% if !(user_signed_in?) %>
         <div type="button" id="123" data-bs-toggle="modal" data-bs-target=".sign_in" class="btn btn-warning">
           <%= t("navbar.sign_in") %>
@@ -35,20 +35,19 @@
         </div>
       <% end %>
       <%if user_signed_in?%>
+        <font size="5"><%= link_to current_user.nickname, current_user%></font>
         <span class="text-dark"><%= link_to t("navbar.sign_out"), destroy_user_session_path, method: :delete, :class => 'btn btn-warning' %></span>
       <% end %>
     </div>
-
-  </div>
-
-  <div class="dropdown language">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLocale" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <%= t(get_locale).upcase %>
-    </button>
-    <div  class="dropdown-menu" aria-labelledby="dropdownMenuLocale">
-      <% I18n.available_locales.each do |locale| %>
-      <%= link_to(t(locale).upcase, url_for(locale: locale), class: "dropdown-item") if locale.to_s != get_locale.to_s %>
-      <% end %>
+    <div class="dropdown language" style="padding:5px 10px 0px 4px">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuLocale" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= t(get_locale).upcase %>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLocale">
+        <% I18n.available_locales.each do |locale| %>
+        <%= link_to(t(locale).upcase, url_for(locale: locale), class: "dropdown-item") if locale.to_s != get_locale.to_s %>
+        <% end %>
+      </div>
     </div>
   </div>
 </nav>

@@ -331,6 +331,8 @@ ru:
         email: E-mail
         password: Пароль
         password_confirmation: Подтверждение пароля
+        nickname: Никнейм
+        phone: Номер телефона
         button:
           register: Зарегистрироваться
       error: "Неверный E-mail/пароль. Просмотрите следующие ошибки:"

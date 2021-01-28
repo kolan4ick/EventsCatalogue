@@ -6,4 +6,10 @@ class User < ApplicationRecord
   #has_many :events
   has_many :event_subscribes
   has_many :events, :through => :event_subscribes
+  def events(user)
+    events = []
+    user.event_subscribes.each do |event_subscribe|
+    events.push(Event.find(event_subscribe.event_id))
+  end
+  end
 end
