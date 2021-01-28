@@ -1,8 +1,14 @@
 <div class="col-12 col-md-5 col-lg-4">
-  <div class="card m-3-white bg-dark mb-3" style="width:25rem;">
-    <%= link_to event_path(event) do %>
-    <%= event_image(event.avatar, 250, 250, "card-img-top")%>
-    <div class="card-body">
+  <div class="" style="w-100 order-3 d-flex justify-content-end">
+    <%= link_to event_path(event) do %>  
+  <style> img {
+   padding:1px;
+   border:5px solid #212529;
+   background-color:#6c757d;
+}
+</style>
+    <%= event_image(event.avatar, 250, 250, "rounded-circle")%>
+    <div class="card-body" align="left">
       <%= event.name%>
     </div>
   <%end%>

@@ -5,12 +5,33 @@
   }
 </script>
 <div class="m-3">
+  <style>
+    .w3-border {
+    border: 3px solid #212529 !important;
+}
+.w3-container, .w3-panel {
+    padding: 0.01em 16px;
+}
+.w3-round-xlarge {
+    border-radius: 16px;
+}
+  </style>
+  <div class="w3-container w3-border w3-round-xlarge">
+
   <h1>
     <%= t("views.events.show.name") %>
     <%=@event.name%>
     <h1>
+    </div>
       <div type="button" class="photo_link">
+        <br>
         <p>
+          <style> img {
+           padding:1px;
+           border:5px solid #212529;
+           background-color:#6c757d;
+        }
+        </style>
           <%= image_tag @event.avatar, width:300, height:300, onclick:"onClickImage(this)", class:"rounded-circle" %>
         </p>
       </div>
