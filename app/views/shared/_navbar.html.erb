@@ -49,7 +49,7 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLocale">
         <% I18n.available_locales.each do |locale| %>
-        <%= link_to(t(locale).upcase, url_for(locale: locale), class: "dropdown-item") if locale.to_s != get_locale.to_s %>
+        <%= link_to(t(locale).upcase, request.params.merge( locale: locale ), class: "dropdown-item") if locale.to_s != get_locale.to_s %>
         <% end %>
       </div>
     </div>
