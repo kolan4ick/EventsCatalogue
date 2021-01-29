@@ -239,7 +239,12 @@ en:
       placeholder: Search
   views:
     home_page:
-      subtitle: Main page
+      subtitle: "Event catalog is a platform created by two UzhNU students with the support of Cyber Spells. The main function is to tell you about events from many parts of the world, and inform you about the details of the incident. To post an event, just contact the administrator. Placement is absolutely free, except for paid placements, when developers have nothing to buy Rolton."
+    archive:
+      subtitle: "Events that have already passed"
+    user:
+      show:
+        subtitle: "Events you are subscribed to"
     pagination:
       next: "Next"
       previous: "Previous"
