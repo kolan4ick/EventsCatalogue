@@ -30,51 +30,52 @@
            padding:1px;
            border:5px solid #212529;
            background-color:#6c757d;
+           float: left;
+           margin: -1vw 2vw 17px 0;
         }
         </style>
           <%= image_tag @event.avatar, width:300, height:300, onclick:"onClickImage(this)", class:"rounded-circle" %>
+
+          <font size="6" color="" face="Tahoma">
+
+            <%=t("views.events.show.orgranizator")%>
+            <%= @event.orgranizator%>
+            <br>
+            <%= t("views.events.show.place") %>
+            <%=@event.place%>
+            <br>
+            <%=t("views.events.show.type.title")%>
+            <%if @event.price%>
+              <%=t("views.events.show.type.true")%>
+            <%else%>
+              <%=t("views.events.show.type.false")%>
+            <%end%>
+            <br>
+            <%= t("views.events.show.begin_date") %>
+            <%=@event.begin_date.to_date.day%>.<%=@event.begin_date.to_date.month%>.<%=@event.begin_date.to_date.year%>
+            <br>
+            <%= t("views.events.show.end_date") %>
+            <%=@event.end_date.to_date.day%>.<%=@event.end_date.to_date.month%>.<%=@event.end_date.to_date.year%>
+            <br>
+            <%= t("views.events.show.count")%>
+            <%= @event.event_subscribes.size%>
+          </font>
         </p>
       </div>
-      <h4>
-        <%= t("views.events.show.body") %>
-        <%=@event.body%>
+      <div class="body">
+        <h4>
+        <%= t("views.events.show.body")%>
+        <%= @event.body%>
       </h4>
-      <h4>
-        <%= t("views.events.show.place") %>
-        <%=@event.place%>
-      </h4>
-      <h4>
-        <%=t("views.events.show.type.title")%>
-        <%if @event.price%>
-          <%=t("views.events.show.type.true")%>
-        <%else%>
-          <%=t("views.events.show.type.false")%>
-        <%end%>
-      </h4>
+      </div>
       <h4><%= t("views.events.show.images") if @event.images.count>0%></h4>
-      <div class="col-8">
+      <br><div class="col-9">
         <%@event.images.each do |image|%>
           <div type="button" class="photo_link">
             <%=image_tag image, width:250, height:250, onclick:"onClickImage(this)"%>
           </div>
         <%end%>
       </div>
-      <h4>
-        <%= t("views.events.show.begin_date") %>
-        <%=@event.begin_date.to_date.day%>.<%=@event.begin_date.to_date.month%>.<%=@event.begin_date.to_date.year%>
-      </h4>
-      <h4>
-        <%= t("views.events.show.end_date") %>
-        <%=@event.end_date.to_date.day%>.<%=@event.end_date.to_date.month%>.<%=@event.end_date.to_date.year%>
-      </h4>
-      <h4>
-        <%=t("views.events.show.orgranizator")%>
-        <%= @event.orgranizator%>
-      </h4>
-      <h4>
-        <%= t("views.events.show.count")%>
-        <%= @event.event_subscribes.size%>
-      </h4>
       <% if @event.end_date >= Time.now %>
         <% if user_signed_in? %>
           <% pre_event = @event.event_subscribes.find { |eventsub| eventsub.user_id == current_user.id && eventsub.event_id == @event.id} %>
